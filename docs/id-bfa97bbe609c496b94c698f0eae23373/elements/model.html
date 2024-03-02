@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Archimate 3.2 kennisbank</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Archimate 3.2 kennisbank</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+                    <!-- Analysis -->
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="analysis">
+						<table class="table table-striped table-hover table-condensed" id="used-in-views">
+							<thead>
+								<tr><th colspan="2" class="i18n-used-in-views" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-viewpoint"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="table table-striped table-hover table-condensed" id="model-relations">
+							<thead>
+								<tr><th colspan="4" class="i18n-model-relations" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-type"></th>
+									<th class="i18n-source"></th>
+									<th class="i18n-target"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-bfa97bbe609c496b94c698f0eae23373", type:"ArchimateModel", name:decodeURL("Archimate+3.2+kennisbank"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-ab6ae9c77d90493db31a8c2ba2597f0e", contenttype:"Folder"});
+								dataFolders.push({id:"id-ab6ae9c77d90493db31a8c2ba2597f0e", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-8d7e9bbead364eb48ac24e6c1a588b6a", contenttype:"Folder"});
+								dataFolders.push({id:"id-8d7e9bbead364eb48ac24e6c1a588b6a", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-abf115e6d8f84375a66795018c80d083", contenttype:"Folder"});
+								dataFolders.push({id:"id-abf115e6d8f84375a66795018c80d083", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-71e7e10731bc4f1c86935d07551e11cd", contenttype:"Folder"});
+								dataFolders.push({id:"id-71e7e10731bc4f1c86935d07551e11cd", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-1e27d58ec595417eb1903700f2d8815d", contenttype:"Folder"});
+								dataFolders.push({id:"id-1e27d58ec595417eb1903700f2d8815d", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-5a322b918b97482cb6983b7f48a440bf", contenttype:"Folder"});
+								dataFolders.push({id:"id-5a322b918b97482cb6983b7f48a440bf", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-2478a41e4de54645ada6d90f4a6aeafd", contenttype:"Folder"});
+								dataFolders.push({id:"id-2478a41e4de54645ada6d90f4a6aeafd", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-bc6dec6cf04a4eabbc2cef23402209c9", contenttype:"Folder"});
+								dataFolders.push({id:"id-bc6dec6cf04a4eabbc2cef23402209c9", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-bfa97bbe609c496b94c698f0eae23373", contentid:"id-7bc363e1a28f45779a2241b72935e8c4", contenttype:"Folder"});
+								dataFolders.push({id:"id-7bc363e1a28f45779a2241b72935e8c4", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-e77ad7353a164035b8e074a8a801dab4", contenttype:"Folder"});
+									dataFolders.push({id:"id-e77ad7353a164035b8e074a8a801dab4", type:"Folder", name:decodeURL("01.+Introductie"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-e77ad7353a164035b8e074a8a801dab4", contentid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contenttype:"SketchModel"});
+											dataViews.push({id:"id-3dfc8b7ffd1240b397e82ae674370b1d", type:"SketchModel", name:decodeURL("00.+Welkom"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-9433e8882fbf4ddab94fc181d847e01a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-e9a62317e576433d916f99e7ee1bec44", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-8c7038e69eac4a4e9799e191ffbfdfd9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-fcf3cd1d4c3c4bff928d574bf0af5eff", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-1c4fc336936447d39a4ebd3b8d7ea8c7", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-401ccff9eab049bb94c85a9c2c28d3ed", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-d987750c1d0a4d2b83db41a28b2caf77", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-bfdb7f508e2a453db4240f6f4d37946a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-2c1ea7ad7cc24e9988d88828a2811f06", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-6402f5c8c1ee465aa652687a0108adb9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-37c89e77960f4460b9517c0184de0f96", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-1da4e487a751475da2b823661c878c75", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-1ee507526199432bbf848e773aab7dec", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-85873963c7604e92978bc5a3b2160b3a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-3f95a667814f4d4b9a5fe48b663f481e", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-3dfc8b7ffd1240b397e82ae674370b1d", contentid:"id-4bb057043f624ba99086eaec8f94040e", contenttype:"SketchModel"});
+
+										dataFoldersContent.push({folderid:"id-e77ad7353a164035b8e074a8a801dab4", contentid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contenttype:"SketchModel"});
+											dataViews.push({id:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", type:"SketchModel", name:decodeURL("01.+Introductie"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-9433e8882fbf4ddab94fc181d847e01a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-e9a62317e576433d916f99e7ee1bec44", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-8c7038e69eac4a4e9799e191ffbfdfd9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-fcf3cd1d4c3c4bff928d574bf0af5eff", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-1c4fc336936447d39a4ebd3b8d7ea8c7", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-401ccff9eab049bb94c85a9c2c28d3ed", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-d987750c1d0a4d2b83db41a28b2caf77", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-bfdb7f508e2a453db4240f6f4d37946a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-2c1ea7ad7cc24e9988d88828a2811f06", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-6402f5c8c1ee465aa652687a0108adb9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-37c89e77960f4460b9517c0184de0f96", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-1da4e487a751475da2b823661c878c75", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-1ee507526199432bbf848e773aab7dec", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-85873963c7604e92978bc5a3b2160b3a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-3f95a667814f4d4b9a5fe48b663f481e", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contentid:"id-4bb057043f624ba99086eaec8f94040e", contenttype:"SketchModel"});
+
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-61cde68a1192442c9d3d16feafc94e23", contenttype:"Folder"});
+									dataFolders.push({id:"id-61cde68a1192442c9d3d16feafc94e23", type:"Folder", name:decodeURL("02.+Definitie"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-61cde68a1192442c9d3d16feafc94e23", contentid:"id-9433e8882fbf4ddab94fc181d847e01a", contenttype:"SketchModel"});
+											dataViews.push({id:"id-9433e8882fbf4ddab94fc181d847e01a", type:"SketchModel", name:decodeURL("02.+Definities"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-2c65057cffe44114b0a28819f6358116", contenttype:"Folder"});
+									dataFolders.push({id:"id-2c65057cffe44114b0a28819f6358116", type:"Folder", name:decodeURL("03.+Structuur"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-2c65057cffe44114b0a28819f6358116", contentid:"id-e9a62317e576433d916f99e7ee1bec44", contenttype:"SketchModel"});
+											dataViews.push({id:"id-e9a62317e576433d916f99e7ee1bec44", type:"SketchModel", name:decodeURL("03.+Structuur"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-fbf1021d76254393b6fc2567c1f7f362", contenttype:"Folder"});
+									dataFolders.push({id:"id-fbf1021d76254393b6fc2567c1f7f362", type:"Folder", name:decodeURL("04.+Metamodel"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-fbf1021d76254393b6fc2567c1f7f362", contentid:"id-8c7038e69eac4a4e9799e191ffbfdfd9", contenttype:"SketchModel"});
+											dataViews.push({id:"id-8c7038e69eac4a4e9799e191ffbfdfd9", type:"SketchModel", name:decodeURL("04.+Metamodel"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-06b27ee280074c3b9f9a4a029c3c86f2", contenttype:"Folder"});
+									dataFolders.push({id:"id-06b27ee280074c3b9f9a4a029c3c86f2", type:"Folder", name:decodeURL("05.+Relaties"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-06b27ee280074c3b9f9a4a029c3c86f2", contentid:"id-fcf3cd1d4c3c4bff928d574bf0af5eff", contenttype:"SketchModel"});
+											dataViews.push({id:"id-fcf3cd1d4c3c4bff928d574bf0af5eff", type:"SketchModel", name:decodeURL("05.+Relaties"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-8b46d64229f74619a7b83518e5420a62", contenttype:"Folder"});
+									dataFolders.push({id:"id-8b46d64229f74619a7b83518e5420a62", type:"Folder", name:decodeURL("06.+Motivatie"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-8b46d64229f74619a7b83518e5420a62", contentid:"id-1c4fc336936447d39a4ebd3b8d7ea8c7", contenttype:"SketchModel"});
+											dataViews.push({id:"id-1c4fc336936447d39a4ebd3b8d7ea8c7", type:"SketchModel", name:decodeURL("06.+Motivatie"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-b16fe190fe8a44fabb6f3a29efa6b15b", contenttype:"Folder"});
+									dataFolders.push({id:"id-b16fe190fe8a44fabb6f3a29efa6b15b", type:"Folder", name:decodeURL("07.+Strategie+laag"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-b16fe190fe8a44fabb6f3a29efa6b15b", contentid:"id-401ccff9eab049bb94c85a9c2c28d3ed", contenttype:"SketchModel"});
+											dataViews.push({id:"id-401ccff9eab049bb94c85a9c2c28d3ed", type:"SketchModel", name:decodeURL("07.+Strategie+laag"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-0d64acb78f51406eaa5cbcfb862bddd7", contenttype:"Folder"});
+									dataFolders.push({id:"id-0d64acb78f51406eaa5cbcfb862bddd7", type:"Folder", name:decodeURL("08.+Business+laag"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-0d64acb78f51406eaa5cbcfb862bddd7", contentid:"id-d987750c1d0a4d2b83db41a28b2caf77", contenttype:"SketchModel"});
+											dataViews.push({id:"id-d987750c1d0a4d2b83db41a28b2caf77", type:"SketchModel", name:decodeURL("08.+Business+laag"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-81f4f8b4087f4e2db496da717e947594", contenttype:"Folder"});
+									dataFolders.push({id:"id-81f4f8b4087f4e2db496da717e947594", type:"Folder", name:decodeURL("09.+Applicatie+laag"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-81f4f8b4087f4e2db496da717e947594", contentid:"id-bfdb7f508e2a453db4240f6f4d37946a", contenttype:"SketchModel"});
+											dataViews.push({id:"id-bfdb7f508e2a453db4240f6f4d37946a", type:"SketchModel", name:decodeURL("09.+Applicatie+laag"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-69aebbbebc9f4123b09962ea23f94b29", contenttype:"Folder"});
+									dataFolders.push({id:"id-69aebbbebc9f4123b09962ea23f94b29", type:"Folder", name:decodeURL("10.+Technologie+laag"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-69aebbbebc9f4123b09962ea23f94b29", contentid:"id-2c1ea7ad7cc24e9988d88828a2811f06", contenttype:"SketchModel"});
+											dataViews.push({id:"id-2c1ea7ad7cc24e9988d88828a2811f06", type:"SketchModel", name:decodeURL("10.+Technologie+laag"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-a8c1b653c02f415b839951d85185ec86", contenttype:"Folder"});
+									dataFolders.push({id:"id-a8c1b653c02f415b839951d85185ec86", type:"Folder", name:decodeURL("12.+Relaties+tussen+lagen"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-a8c1b653c02f415b839951d85185ec86", contentid:"id-37c89e77960f4460b9517c0184de0f96", contenttype:"SketchModel"});
+											dataViews.push({id:"id-37c89e77960f4460b9517c0184de0f96", type:"SketchModel", name:decodeURL("12.+Relaties+tussen+lagen"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-2ece0de34fb44674b617f0c148309e7a", contenttype:"Folder"});
+									dataFolders.push({id:"id-2ece0de34fb44674b617f0c148309e7a", type:"Folder", name:decodeURL("11.+Implementatie+en+migratie+laag"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-2ece0de34fb44674b617f0c148309e7a", contentid:"id-6402f5c8c1ee465aa652687a0108adb9", contenttype:"SketchModel"});
+											dataViews.push({id:"id-6402f5c8c1ee465aa652687a0108adb9", type:"SketchModel", name:decodeURL("11.+Implementatie+en+migratie+laag"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-688a3927e37949548452d21d65cd7035", contenttype:"Folder"});
+									dataFolders.push({id:"id-688a3927e37949548452d21d65cd7035", type:"Folder", name:decodeURL("14.+Views+en+viewpoints"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-688a3927e37949548452d21d65cd7035", contentid:"id-1ee507526199432bbf848e773aab7dec", contenttype:"SketchModel"});
+											dataViews.push({id:"id-1ee507526199432bbf848e773aab7dec", type:"SketchModel", name:decodeURL("14.+Views+en+viewpoints"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-a03c2a14c83c43ad8d7db10d4d0672fd", contenttype:"Folder"});
+									dataFolders.push({id:"id-a03c2a14c83c43ad8d7db10d4d0672fd", type:"Folder", name:decodeURL("13.+Maatwerk"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-a03c2a14c83c43ad8d7db10d4d0672fd", contentid:"id-1da4e487a751475da2b823661c878c75", contenttype:"SketchModel"});
+											dataViews.push({id:"id-1da4e487a751475da2b823661c878c75", type:"SketchModel", name:decodeURL("13.+Maatwerk"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-95f4d2e6e7834f42a36028c17f96e53d", contenttype:"Folder"});
+									dataFolders.push({id:"id-95f4d2e6e7834f42a36028c17f96e53d", type:"Folder", name:decodeURL("A+-+Samenvatting+elementen"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-95f4d2e6e7834f42a36028c17f96e53d", contentid:"id-85873963c7604e92978bc5a3b2160b3a", contenttype:"SketchModel"});
+											dataViews.push({id:"id-85873963c7604e92978bc5a3b2160b3a", type:"SketchModel", name:decodeURL("A+-+Samenvatting+elementen"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-e3bfcd58f1344688b5e9baf386dbf922", contenttype:"Folder"});
+									dataFolders.push({id:"id-e3bfcd58f1344688b5e9baf386dbf922", type:"Folder", name:decodeURL("B+-+Relaties+en+afgeleides"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-e3bfcd58f1344688b5e9baf386dbf922", contentid:"id-3f95a667814f4d4b9a5fe48b663f481e", contenttype:"SketchModel"});
+											dataViews.push({id:"id-3f95a667814f4d4b9a5fe48b663f481e", type:"SketchModel", name:decodeURL("B+-+Relaties+en+afgeleides"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-9eec5bd34b9b496ab47bea2203c8e369", contenttype:"Folder"});
+									dataFolders.push({id:"id-9eec5bd34b9b496ab47bea2203c8e369", type:"Folder", name:decodeURL("C+-+Relaties+met+andere+talen"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-9eec5bd34b9b496ab47bea2203c8e369", contentid:"id-4bb057043f624ba99086eaec8f94040e", contenttype:"SketchModel"});
+											dataViews.push({id:"id-4bb057043f624ba99086eaec8f94040e", type:"SketchModel", name:decodeURL("C+-+Relaties+met+andere+talen"), documentation:decodeURL("")});
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-505262e1b2f74b9e86f010687fe400c2", contenttype:"Folder"});
+									dataFolders.push({id:"id-505262e1b2f74b9e86f010687fe400c2", type:"Folder", name:decodeURL("Templates"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-505262e1b2f74b9e86f010687fe400c2", contentid:"id-4274be2bd2e9470eb644c7f203097c54", contenttype:"SketchModel"});
+											dataViews.push({id:"id-4274be2bd2e9470eb644c7f203097c54", type:"SketchModel", name:decodeURL("New+Sketch"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-688fa2ad78ff4a90a1d88d58a0c97bcd", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-9433e8882fbf4ddab94fc181d847e01a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-e9a62317e576433d916f99e7ee1bec44", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-8c7038e69eac4a4e9799e191ffbfdfd9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-fcf3cd1d4c3c4bff928d574bf0af5eff", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-1c4fc336936447d39a4ebd3b8d7ea8c7", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-401ccff9eab049bb94c85a9c2c28d3ed", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-d987750c1d0a4d2b83db41a28b2caf77", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-bfdb7f508e2a453db4240f6f4d37946a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-2c1ea7ad7cc24e9988d88828a2811f06", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-6402f5c8c1ee465aa652687a0108adb9", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-37c89e77960f4460b9517c0184de0f96", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-1da4e487a751475da2b823661c878c75", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-1ee507526199432bbf848e773aab7dec", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-85873963c7604e92978bc5a3b2160b3a", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-3f95a667814f4d4b9a5fe48b663f481e", contenttype:"SketchModel"});
+													dataViewsContent.push({viewid:"id-4274be2bd2e9470eb644c7f203097c54", contentid:"id-4bb057043f624ba99086eaec8f94040e", contenttype:"SketchModel"});
+
+										dataFoldersContent.push({folderid:"id-505262e1b2f74b9e86f010687fe400c2", contentid:"id-96617e841d9249b4a3276af7f026f192", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-96617e841d9249b4a3276af7f026f192", type:"ArchimateDiagramModel", name:decodeURL("New+ArchiMate+View"), documentation:decodeURL("")});
+
+
+									dataFoldersContent.push({folderid:"id-7bc363e1a28f45779a2241b72935e8c4", contentid:"id-bddd5b6e63984d99bbf17e9ce085247d", contenttype:"ArchimateDiagramModel"});
+										dataViews.push({id:"id-bddd5b6e63984d99bbf17e9ce085247d", type:"ArchimateDiagramModel", name:decodeURL("Default+View"), documentation:decodeURL("")});
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
