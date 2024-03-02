@@ -1,5 +1,5 @@
 # Archimate zandbak
-Een omgeving waarmee ik Archimate wat beter mee onder de knie probeer te krijgen.
+*Een omgeving waarmee ik Archimate wat beter mee onder de knie probeer te krijgen.*
 
 Inmiddels maak ik zelf ongeveer zeven jaar gebruik van Archimate voor het vastleggen en weergeven van diverse omgevingen in architectuur. Desondanks blijf ik een beetje een moeilijke relatie houden met Archimate - soms loopt het heel vlotjes maar regelmatig kom ik er niet direct uit hoe ik iets het beste kan modelleren of weergeven. Wat wel helpt is altijd trouw proberen te blijven aan de regels van Archimate - ik zeg bewust 'proberen' want ook dat is niet altijd even gemakkelijk.
 
