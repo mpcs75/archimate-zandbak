@@ -5,4 +5,4 @@ Inmiddels maak ik zelf ongeveer zeven jaar gebruik van Archimate voor het vastle
 
 Om zelf wat te spelen en steeds een beetje bij te leren heb ik een Archimate zandbak gemaakt. Omdat samen leren leuker is nodig ik iedereeen die daar interesse in heeft om mijn interpretaties van de diverse onderwerpen binnen de standaard te bekijken en te beoordelen. Feedback en kritiek is daarom ook meer dan welkom - zolang het maar netjes blijft en constructief is. Ook vragen zijn welkom. Ieder door mij uitgewerkte Archimate view is voorzien van een contact elementje waarmee je een issue aan kunt maken binnen deze Github repository. 
 
-Open de Archimate zandbak
+Link naar de publicatie: [Archimate zandbak](https://mpcs75.github.io/archimate-zandbak/?view=id-3dfc8b7ffd1240b397e82ae674370b1d)
