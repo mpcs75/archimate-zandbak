@@ -1,8 +1,6 @@
-# Archimate zandbak
+# Digitale architectuur zandbak
 *Een omgeving waarmee ik Archimate wat beter mee onder de knie probeer te krijgen.*
 
-Inmiddels maak ik zelf ongeveer zeven jaar gebruik van Archimate voor het vastleggen en weergeven van diverse omgevingen in architectuur. Desondanks blijf ik een beetje een moeilijke relatie houden met Archimate - soms loopt het heel vlotjes maar regelmatig kom ik er niet direct uit hoe ik iets het beste kan modelleren of weergeven. Wat wel helpt is altijd trouw proberen te blijven aan de regels van Archimate - ik zeg bewust 'proberen' want ook dat is niet altijd even gemakkelijk.
-
-Om zelf wat te spelen en steeds een beetje bij te leren heb ik een Archimate zandbak gemaakt. Omdat samen leren leuker is nodig ik iedereeen die daar interesse in heeft om mijn interpretaties van de diverse onderwerpen binnen de standaard te bekijken en te beoordelen. Feedback en kritiek is daarom ook meer dan welkom - zolang het maar netjes blijft en constructief is. Ook vragen zijn welkom. Ieder door mij uitgewerkte Archimate view is voorzien van een contact elementje waarmee je een issue aan kunt maken binnen deze Github repository. 
+In deze zandbak speel ik aan de hand van diverse tools, methodes, en frameworks zelf wat met het "werken onder architectuur" - Dit doe ik omdat ik ze allemaal bij mijn dagelijks werk  gebruik en daarom mogelijk probeer te begrijpen. Soms lukt me dat aardig en soms kost me dat wat meer moeite. Er zullen ongetwijfeld foutjes in deze zanbak zitten maar daar is het ook een zandbak voor. Mijn interpretatie van onderwerpen zal wellicht ook niet altijd dezelfde zijn al die van een ander. Mocht je hier terecht zijn gekomen en vragen of opmerkingen hebben dan kun je die kwijt via Github - Iedere pagina is voorzien van een contact tegeltje. - Het bijhouden van deze zanbak is een hobby dus ik zal over het algemeen pas in de avond of in het weekend kunnen reageren. 
 
 Link naar de publicatie: [Archimate zandbak](https://mpcs75.github.io/archimate-zandbak/?view=id-3dfc8b7ffd1240b397e82ae674370b1d)
